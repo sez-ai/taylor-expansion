@@ -1,10 +1,10 @@
 
 # Taylor Series Expansion
 
-___
+
 
 This _**toy project**_ plots [Taylor Approximation](https://en.wikipedia.org/wiki/Taylor_series) for given function and the original function.  
-Examples for _sinx_ and a custom function.
+Here is a an example for _sinx_ and a custom function.
 
 Open python interpreter in terminal, enter below
 
