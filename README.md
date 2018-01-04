@@ -34,8 +34,10 @@ To plot x^2 + x^3 - 3
 plot(appr_order=0, x_upper_bound=4, function=x**2+x**3-3)
 
 ``` 
+--- 
+TODOs:
 
-+ I will add better types of invokation as soon as I have time to discover...
+~~Add better types of invokation as soon as I have time to discover...~~
 
 
 ___

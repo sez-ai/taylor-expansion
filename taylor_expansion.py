@@ -56,14 +56,11 @@ def plot(appr_order, x_upper_bound, function):
 
 def demo():
     x = sy.Symbol('x')
-    plot(appr_order=1, x_upper_bound=3, function=sin(x))
-    plot(appr_order=1, x_upper_bound=10, function=exp(x))
     plot(appr_order=3, x_upper_bound=4, function=sin(x))
     plot(appr_order=3, x_upper_bound=4, function=exp(x))
+    plot(appr_order=0, x_upper_bound=4, function=x**2+x**3-3)
     plot(appr_order=7, x_upper_bound=10, function=sin(x))
-    plot(appr_order=7, x_upper_bound=10, function=exp(x))
-    plot(appr_order=15, x_upper_bound=10, function=sin(x))
-    plot(appr_order=15, x_upper_bound=10, function=exp(x))
+    
 
-
-demo()
+if __name__ == '__main__':
+    demo()
