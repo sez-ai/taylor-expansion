@@ -58,7 +58,7 @@ def demo():
     x = sy.Symbol('x')
     plot(appr_order=3, x_upper_bound=4, function=sin(x))
     plot(appr_order=3, x_upper_bound=4, function=exp(x))
-    plot(appr_order=0, x_upper_bound=4, function=x**2+x**3-3)
+    plot(appr_order=5, x_upper_bound=4, function=x**2+x**3-3)
     plot(appr_order=7, x_upper_bound=10, function=sin(x))
     
 
