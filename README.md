@@ -5,7 +5,7 @@
 
 This _**toy project**_ plots [Taylor Approximation](https://en.wikipedia.org/wiki/Taylor_series) for given function and the original function.  
 Dependences are listed in [requirements file](https://github.com/kirbiyik/taylor-expansion/blob/master/requirements.txt). 
-Code has written for Python3 but should be fine with Python2, as well. 
+Code was written for Python3 but should be fine with Python2, as well. 
 
 
 To see the demo, enter command below. 
