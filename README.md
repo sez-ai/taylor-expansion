@@ -29,7 +29,7 @@ x = sy.Symbol('x')
 ```
 To plot _sinx_ function enter below
 ``` python 
-te.lot(appr_order=8, x_upper_bound=20, function=sin(x))
+te.plot(appr_order=8, x_upper_bound=20, function=sin(x))
 ```  
 To plot x^2 + x^3 - 3
 ``` python 
