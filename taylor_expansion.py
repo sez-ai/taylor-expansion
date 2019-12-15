@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sympy.functions import sin,cos,exp
 import sympy as sy
-
-
+plt.rcParams["figure.figsize"] = (12,8) # w, h
 
 def factorial(k):
     if k == 0:
@@ -35,21 +34,29 @@ def taylor(func, x_0, n):
 
 
 # approximation of first 'n' terms
-def plot(appr_order, x_upper_bound, function):
+def plot(function, x_upper_bound=None, appr_order=None, no_approx=False):
+    """
+    function: simpy function to be passed
+    appr_order: degree of approximation polynom
+    x_upper_bound: Boundaries of x during the visualization 
+    no_approx: Only plot the original function, mutually exclusive with above arguments
+    """
     x = sy.Symbol('x')
-    # approximation function,
-    appr_function = taylor(function, 0, appr_order)
-    x1 = np.linspace(-1 * x_upper_bound, x_upper_bound)
-    y1 = []
-    for k in x1:
-        y1.append(appr_function.subs(x,k))
-    plt.plot(x1,y1, label="approximation value")
+    if not no_approx:
+        # approximation function,
+        appr_function = taylor(function, 0, appr_order)
+        x1 = np.linspace(-1 * x_upper_bound, x_upper_bound)
+        y1 = []
+        for k in x1:
+            y1.append(appr_function.subs(x,k))
+        plt.plot(x1,y1, label="approximation value")
+        plt.suptitle('Taylor Series Expansion for '+ str(function) +' \n order: ' + str(appr_order))
 
     x_2 = np.linspace(-1*x_upper_bound,x_upper_bound)
     y_2 = []
     for k in x_2:
         y_2.append(function.subs(x,k))
-    plt.suptitle('Taylor Series Expansion for '+ str(function) +' \n order: ' + str(appr_order))
+
     plt.plot(x_2, y_2, label="real value")
     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
     return plt.show()
